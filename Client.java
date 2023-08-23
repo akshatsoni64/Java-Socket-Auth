@@ -39,6 +39,9 @@ public class Client {
                         dout.close();
                         connection.close();
                         break;
+                    default:
+                        System.out.println(serverMessage);
+                        break;
                 }
             }
             scanner.close();

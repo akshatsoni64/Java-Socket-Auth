@@ -45,7 +45,10 @@ public class Server {
 
                         Boolean authed = (username.equals("username") && password.equals("password"));
                         String response = authed ? "Authentication Successful" : "Authentication Failed";
-                        System.out.println(response);
+                        System.out.println(response);                        
+
+                        dout.writeUTF(response);
+                        dout.flush();
 
                         break;
                     case 3:
